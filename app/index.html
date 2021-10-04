@@ -1,15 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Фрешок</title>
+  <link rel="icon" href="images/favicon.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
-<body>
 
+<body>
+  <header class="header">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__info info">
+
+          <ul class="info__connect">
+            <li class="info__connect-item">
+              <a class="info__connect-link" href="#">
+                Адрес и время доставки
+              </a>
+            </li>
+            <li class="info__connect-item">
+              <a class="info__connect-link" href="tel:+38 (050) 111 11 11">
+                Горячая линия 24/7
+              </a>
+            </li>
+          </ul>
+
+          <ul class="info__menu-list">
+            <li class="info__menu-item">
+              <a class="info__menu-link" href="#">
+                Доставка
+              </a>
+            </li>
+            <li class="info__menu-item">
+              <a class="info__menu-link" href="#">
+                О нас
+              </a>
+            </li>
+            <li class="info__menu-item">
+              <a class="info__menu-link" href="#">
+                Новости
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="header__bottom">
+      <div class="container">
+        <nav class="header__menu">
+          <a class="header__logo" href="#">
+            <img class="logo__img" src="images/logo.svg" alt="Логотип">
+          </a>
+
+          <button class="header__catalog" type="button">
+            <span></span>
+            Каталог продуктов
+          </button>
+
+          <form class="header__form">
+            <input class="header__input" type="search" placeholder="Найти в магазине ...">
+            <button class="header__form--btn" type="button">Поиск</button>
+          </form>
+
+
+          <ul class="header__user user">
+            <li class="user__item">
+              <a class="user__link" href="#">
+                <span class="sr-only">Профиль пользователя</span>
+              </a>
+            </li>
+            <li class="user__item">
+              <a class="user__link" href="#">
+                <span class="sr-only">Избранное</span>
+                <div class="user__num">12</div>
+              </a>
+            </li>
+            <li class="user__item">
+              <a class="user__link" href="#">
+                <span class="sr-only">Корзина</span>
+                <div class="user__num">12</div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+
+    </div>
+  </header>
 
   <script src="js/main.min.js"></script>
 </body>
+
 </html>
