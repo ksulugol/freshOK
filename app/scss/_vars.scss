@@ -1,5 +1,15 @@
-$default: #121212;
-$accent: #505050;
+:root {
+  --white: #fff;
+  --black: #121212;
+  --grey: #505050;
+  --green: #63A60E;
+  --bg-dgrey: #31352B;
+  --bg-greyf6: #F6F6F6;
+  --bg-greyf5: #f5f5f5;
+  --sale: #CF3E3B;
+  --hit: #FF7A00;
+}
+
 
 %opensans-300 {
   font-family: 'OpenSans-Light', sans-serif;
@@ -22,7 +32,7 @@ $accent: #505050;
   font-weight: 700;
 }
 
-%ruda-400{
+%ruda-400 {
   font-family: 'Ruda-Regular', sans-serif;
   font-weight: 400;
 }
