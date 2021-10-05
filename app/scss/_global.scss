@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: var(--black);
+  font-size: 14px;
+  line-height: 1.4;
+  @extend %opensans-600;
+}
+
+.main{
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
