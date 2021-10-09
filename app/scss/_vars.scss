@@ -3,18 +3,19 @@
   --black: #121212;
   --grey: #505050;
   --green: #63A60E;
-  --bg-lgreen: #E0EDCF; 
+  --bg-lgreen: #E0EDCF;
   --green-hov: #4D800C;
   --bg-dgrey: #31352B;
   --bg-greyf6: #F6F6F6;
   --bg-greyf5: #f5f5f5;
   --greyf4: #4F4F4F;
   --red: #CF3E3B;
+  --red-slider: #e12b32;
   --orange: #FF7A00;
   --green-arrow: #7CB238;
+  --silver: #C1C1C1;
+  --sun: #FFB800;
 }
-
-
 
 %opensans-300 {
   font-family: 'OpenSans-Light', sans-serif;
@@ -50,3 +51,54 @@
   font-family: 'Ruda-Bold', sans-serif;
   font-weight: 700;
 }
+
+%ruda-900 {
+  font-family: 'Ruda-Black', sans-serif;
+  font-weight: 900;
+}
+
+%btn {
+  outline: transparent;
+  padding: 12px 24px;
+  background-color: var(--green);
+  color: var(--white);
+  transition: background-color 0.3s, color 0.3s,
+    box-shadow 0.3s;
+
+  &:hover {
+    background-color: var(--green-hov);
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 0px 4px var(--bg-lgreen);
+  }
+
+  &:active {
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+%left-norm {
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+%right-norm {
+  right: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+%left-green {
+  background-image: url('../images/icons/arrow-left-green.svg');
+  border: 1px solid var(--green);
+  background-color: var(--bg-lgreen);
+}
+
+%right-green {
+  background-image: url('../images/icons/arrow-right-green.svg');
+  border: 1px solid var(--green);
+  background-color: var(--bg-lgreen);
+}
+
