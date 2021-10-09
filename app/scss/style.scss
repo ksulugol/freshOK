@@ -335,8 +335,8 @@
   border-radius: 6px;
   z-index: 10;
   transition: background-image 0.3s,
-  border 0.3s,
-  background-color 0.3s, box-shadow 0.3s;
+    border 0.3s,
+    background-color 0.3s, box-shadow 0.3s;
 }
 
 .slick-prev {
@@ -348,7 +348,7 @@
     @extend %left-green;
   }
 
-  &:focus{
+  &:focus {
     @extend %left-green;
     outline: transparent;
     box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
@@ -361,7 +361,7 @@
 
   &:hover,
   &:active {
-    @extend %right-green; 
+    @extend %right-green;
   }
 
   &:focus {
@@ -370,6 +370,228 @@
     box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
   }
 }
+
+.guarantees {
+  background-color: var(--bg-greyf6);
+  height: 146px;
+  padding: 48px 0 29px;
+
+  &__blocks {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &::before {
+      content: "";
+      width: 100px;
+      height: 50px;
+      background-repeat: no-repeat;
+      background-position: top;
+      background-size: contain;
+    }
+
+    &:nth-child(1)::before {
+      background-image: url('../images/icons/scooter.svg');
+    }
+
+    &:nth-child(2)::before {
+      background-image: url('../images/icons/return.svg');
+    }
+
+    &:nth-child(3)::before {
+      background-image: url('../images/icons/24hours.svg');
+    }
+  }
+
+  &__wrapper {
+    width: 175px;
+  }
+
+  &__title {
+    margin-bottom: 7px;
+    font-size: 16px;
+  }
+
+  &__text {
+    color: var(--grey);
+  }
+}
+
+.products {
+
+  padding-top: 72px;
+
+  &__title {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 32px;
+    @extend %ruda-600;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 51px;
+  }
+
+  &__button {
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    outline: transparent;
+    color: var(--grey);
+    font-size: 15px;
+    @extend %opensans-700;
+    transition: border-bottom 0.3s;
+
+    &:hover,
+    &:active {
+      border-bottom: 3px solid rgba(99, 166, 14, 0.2);
+    }
+  }
+}
+
+.products__elements {
+  margin-bottom: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.products-element {
+
+  &__box {
+    width: 300px;
+    height: 409px;
+    border: 1px solid rgba(17, 17, 17, 0.2);
+    border-radius: 6px;
+    transition: border 0.3s;
+
+    &:hover {
+      border: 1px solid var(--green);
+    }
+  }
+
+  &__inner-top {
+    position: relative;
+    margin-bottom: 55px;
+  }
+
+  &__badges {
+    padding: 3px 6px;
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 10px;
+    line-height: 1;
+    border-radius: 6px;
+    @extend %opensans-700;
+
+    &--one {
+      position: absolute;
+      top: 11px;
+      left: 11px;
+    }
+
+    &--second {
+      position: absolute;
+      top: 34px;
+      left: 11px;
+    }
+
+    &--new {
+      background-color: var(--green);
+    }
+
+    &--sale {
+      background-color: var(--red);
+    }
+
+    &--hit {
+      background-color: var(--orange);
+    }
+  }
+
+  &__link-wishlist {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+    transition: fill 0.3s;
+
+    &:hover {
+      path {
+        fill: var(--sun);
+      }
+    }
+  }
+
+  &__image {
+    margin-bottom: 19px;
+    object-fit: cover;
+  }
+
+  &__title {
+    padding-left: 18px;
+  }
+
+  &__inner-bottom {
+    position: relative;
+  }
+
+  &__price {
+    position: absolute;
+    left: 20px;
+    top: 46px;
+    @extend %opensans-400;
+
+    &--old {
+      position: relative;
+      color: var(--silver);
+
+      &::before {
+        content: "";
+        position: absolute;
+        border-bottom: 1px solid var(--silver);
+        width: 100%;
+        height: 50%;
+        transform: rotate(-7deg);
+      }
+    }
+
+    &--new {
+      color: var(--grey);
+    }
+  }
+}
+
+&__link-cart {
+  position: absolute;
+  right: 18px;
+  top: 50px;
+}
+
+.products__add {
+  @extend %btn;
+  background-color: var(--white);
+
+  &:hover{
+    background-color: var(--bg-lgreen);
+  }
+}
+
 
 
 

@@ -8,6 +8,7 @@ const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 
+
 function browsersync(){
   browserSync.init({
     server: {
@@ -42,7 +43,7 @@ function scripts(){
 }
 
 function images(){
-  return src('app/images/**/*.*')
+  return src('app/images/**/*.svg')
   .pipe(imagemin([
     	imagemin.gifsicle({interlaced: true}),
 	    imagemin.mozjpeg({quality: 75, progressive: true}),
@@ -74,7 +75,7 @@ function watching(){
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
-}
+} 
 
 
 exports.styles = styles;
