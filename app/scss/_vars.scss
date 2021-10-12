@@ -1,6 +1,7 @@
 :root {
   --white: #fff;
   --black: #121212;
+  --menu-cat: #000000;
   --grey: #505050;
   --green: #63A60E;
   --bg-lgreen: #E0EDCF;
@@ -17,87 +18,38 @@
   --sun: #FFB800;
 }
 
-%opensans-300 {
-  font-family: 'OpenSans-Light', sans-serif;
-  font-weight: 300;
+%opensans {
+  font-family: 'OpenSans', sans-serif;
 }
 
-%opensans-400 {
-  font-family: 'OpenSans-Regular', sans-serif;
-  font-weight: 400;
-}
-
-%opensans-600 {
-  font-family: 'OpenSans-SemiBold', sans-serif;
-  font-weight: 600;
-}
-
-%opensans-700 {
-  font-family: 'OpenSans-Bold', sans-serif;
-  font-weight: 700;
-}
-
-%ruda-400 {
-  font-family: 'Ruda-Regular', sans-serif;
-  font-weight: 400;
-}
-
-%ruda-600 {
-  font-family: 'Ruda-SemiBold', sans-serif;
-  font-weight: 600;
-}
-
-%ruda-700 {
-  font-family: 'Ruda-Bold', sans-serif;
-  font-weight: 700;
-}
-
-%ruda-900 {
-  font-family: 'Ruda-Black', sans-serif;
-  font-weight: 900;
-}
-
-%btn {
-  outline: transparent;
-  padding: 12px 24px;
-  background-color: var(--green);
-  color: var(--white);
-  transition: background-color 0.3s, color 0.3s,
-    box-shadow 0.3s;
-
-  &:hover {
-    background-color: var(--green-hov);
-  }
-
-  &:focus {
-    box-shadow: 0px 0px 0px 4px var(--bg-lgreen);
-  }
-
-  &:active {
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
+%ruda {
+  font-family: 'Ruda', sans-serif;
 }
 
 %left-norm {
   left: 0;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
 }
 
 %right-norm {
   right: 0;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: contain;
 }
 
 %left-green {
-  background-image: url('../images/icons/arrow-left-green.svg');
+  background-image: url('../images/sprite.svg#arrow-left-green');
+  background-size: contain;
   border: 1px solid var(--green);
   background-color: var(--bg-lgreen);
 }
 
 %right-green {
-  background-image: url('../images/icons/arrow-right-green.svg');
+  background-image: url('../images/sprite.svg#arrow-right-green');
+  background-size: contain;
   border: 1px solid var(--green);
   background-color: var(--bg-lgreen);
 }

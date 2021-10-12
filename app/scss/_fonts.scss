@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'OpenSans-Light';
+  font-family: 'OpenSans';
   font-weight: 300;
   font-style: normal;
   src: local('OpenSans-Light'),
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-  font-family: 'OpenSans-Regular';
+  font-family: 'OpenSans';
   font-weight: 400;
   font-style: normal;
   src: local('OpenSans-Regular'),
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-  font-family: 'OpenSans-SemiBold';
+  font-family: 'OpenSans';
   font-weight: 600;
   font-style: normal;
   src: local('OpenSans-SemiBold'),
@@ -29,17 +29,17 @@
 }
 
 @font-face {
-  font-family: 'OpenSans-Bold';
+  font-family: 'OpenSans';
   font-weight: 700;
   font-style: normal;
-  src: local('OpenSans-Bold'),
+  src: local('OpenSans'),
     url('../fonts/OpenSans-Bold.woff2') format('woff2'),
     url('../fonts/OpenSans-Bold.woff') format('woff');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Ruda-Regular';
+  font-family: 'Ruda';
   font-weight: 400;
   font-style: normal;
   src: local('Ruda-Regular'),
@@ -49,7 +49,7 @@
 }
 
 @font-face {
-  font-family: 'Ruda-SemiBold';
+  font-family: 'Ruda';
   font-weight: 600;
   font-style: normal;
   src: local('Ruda-SemiBold'),
@@ -59,7 +59,7 @@
 }
 
 @font-face {
-  font-family: 'Ruda-Bold';
+  font-family: 'Ruda';
   font-weight: 700;
   font-style: normal;
   src: local('Ruda-Bold'),
@@ -69,7 +69,7 @@
 }
 
 @font-face {
-  font-family: 'Ruda-Black';
+  font-family: 'Ruda';
   font-weight: 900;
   font-style: normal;
   src: local('Ruda-Black'),
