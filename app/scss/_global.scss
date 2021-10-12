@@ -9,7 +9,9 @@ body {
   color: var(--black);
   font-size: 14px;
   line-height: 1.4;
-  @extend %opensans-600;
+  letter-spacing: 0.03em;
+  @extend %opensans;
+  font-weight: 600;
 }
 
 .main {
@@ -20,4 +22,222 @@ body {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.form-search {
+  position: relative;
+
+  &__input {
+    border-radius: 6px 0 0 6px;
+    outline: transparent;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    letter-spacing: 0.03em;
+    
+  }
+
+  &__btn {
+    position: absolute;
+    background-color: var(--bg-dgrey);
+    border-radius: 0 6px 6px 0;
+    text-transform: uppercase;
+  }
+}
+
+.btn {
+  outline: transparent;
+  padding: 12px 24px;
+  color: var(--white);
+  transition: background-color 0.3s, color 0.3s,
+    box-shadow 0.3s;
+
+  &:hover {
+    background-color: var(--green-hov);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 4px var(--bg-lgreen);
+  }
+
+  &:active {
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.card {
+  padding: 56px 18px 18px;
+  border: 1px solid rgba(17, 17, 17, 0.2);
+  border-radius: 6px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: border 0.3s;
+
+  &:hover {
+    border: 1px solid var(--green)
+  }
+
+  &__badges {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+  }
+
+  &__badge {
+    padding: 3px 6px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1;
+    z-index: 5;
+    display: none;
+
+    &--on {
+      display: block;
+    }
+
+    &--new {
+      background-color: var(--green);
+    }
+
+    &--sale {
+      background-color: var(--red);
+    }
+
+    &--hit {
+      background-color: var(--orange);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__favourite {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    svg {
+      fill: var(--silver);
+      width: 32px;
+      height: 28px;
+      transition: fill 0.3s;
+    }
+
+    &:hover {
+      svg {
+        fill: var(--sun)
+      }
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 86%;
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__title {
+    margin-bottom: 9px;
+    flex: 1 1 auto;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__prices {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__price {
+    font-weight: 400;
+    line-height: 1;
+    color: var(--grey);
+
+    &:not(:last-child) {
+      margin-bottom: 3px;
+    }
+
+    &--old {
+      position: relative;
+      color: var(--silver);
+
+
+      &::before {
+        content: "";
+        color: var(--silver);
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: var(--silver);
+        transform: rotate(-14.99deg);
+      }
+    }
+  }
+
+  &__cart {
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    background-color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+
+    &::before {
+      content: "";
+      width: 16px;
+      height: 15px;
+      background-image: url("../images/sprite.svg#cart");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    &:hover {
+      background-color: var(--green-hov);
+    }
+
+    &:active {
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      color: rgba(var(--white), 0.5);
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 4px var(--bg-lgreen);
+    }
+  }
 }
