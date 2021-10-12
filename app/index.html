@@ -58,15 +58,57 @@
             <img class="logo__img" src="images/sprite.svg#logo" width="200" height="60" alt="Логотип">
           </a>
 
-          <button class="header__catalog" type="button">
-            <span></span>
-            Каталог продуктов
-          </button>
+          <div class="header__catalog catalog">
+            <button class="catalog__btn" type="button">
+              <span></span>
+              Каталог продуктов
+            </button>
+            <ul class="catalog__list">
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">
+                  Овощи и фрукты
+                </a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Бакалея</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Молочные продукты</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Хлеб</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Мясо</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Колбаса</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Рыба</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Алкоголь</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Напитки</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Торты</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Сладкое</a>
+              </li>
+              <li class="catalog__item">
+                <a class="catalog__link" href="#">Чай, кофе</a>
+              </li>
+            </ul>
+          </div>
 
           <form class="header__form form-search" action="#">
             <label class="sr-only" for="search"></label>
             <input class="form-search__input" type="search" placeholder="Найти в магазине ...">
-            <img class="form-search__img" src="images/sprite.svg#search" width="70" height="70"/>
+            <img class="form-search__img" src="images/sprite.svg#search" width="70" height="70" />
             <button class="form-search__btn btn" id="search" name="search" type="submit">Поиск</button>
           </form>
 
@@ -219,7 +261,6 @@
             <button class="products__btn" type="button" data-filter=".grocery">Бакалея</button>
           </li>
         </ul>
-
 
         <ul class="products__content">
 
@@ -447,7 +488,6 @@
               </div>
             </article>
           </li>
-
         </ul>
 
         <button class="products__add btn" type="button">
@@ -531,9 +571,10 @@
               </li>
             </ul>
           </div>
-
         </div>
+
       </div>
+    </div>
     </div>
 
     <div class="footer__bottom">
@@ -555,7 +596,6 @@
 
   </footer>
 
-  <script src="js/mixitup.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 
