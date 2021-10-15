@@ -26,31 +26,42 @@
   font-family: 'Ruda', sans-serif;
 }
 
-%left-norm {
-  left: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-%right-norm {
-  right: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
 %left-green {
-  background-image: url('../images/sprite.svg#arrow-left-green');
-  background-size: contain;
   border: 1px solid var(--green);
   background-color: var(--bg-lgreen);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 13px;
+    width: 18px;
+    height: 32px;
+    mask: url('../images/sprite.svg#arrow-left-green') center / cover;
+    background-color: var(--green);
+  }
 }
 
 %right-green {
-  background-image: url('../images/sprite.svg#arrow-right-green');
-  background-size: contain;
   border: 1px solid var(--green);
   background-color: var(--bg-lgreen);
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 19px;
+    top: 13px;
+    width: 18px;
+    height: 32px;
+    mask: url('../images/sprite.svg#arrow-right-green') center / cover;
+    background-color: var(--green);
+  }
 }
 
+%line-clamp {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

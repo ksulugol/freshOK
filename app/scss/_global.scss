@@ -26,29 +26,79 @@ body {
 
 .form-search {
   position: relative;
+  width: 100%;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 20px;
+    height: 20px;
+    transform: translate(0, -50%);
+    background-image: url('../images/sprite.svg#search');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+  }
 
   &__input {
-    border-radius: 6px 0 0 6px;
+    width: 100%;
+    height: 50px;
+    padding: 0 170px 0 51px;
+    border-radius: 6px;
     outline: transparent;
     font-size: 14px;
     font-weight: 400;
     border: none;
     letter-spacing: 0.03em;
-    
   }
 
   &__btn {
     position: absolute;
+    outline: transparent;
+    height: 50px;
+    right: 0;
+    bottom: 0;
+    padding: 15px 52px;
     background-color: var(--bg-dgrey);
+    color: var(--white);
     border-radius: 0 6px 6px 0;
     text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+      background-color: rgba(49, 53, 43, 0.85);
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 4px var(--bg-lgreen);
+    }
+
+    &:active {
+      box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+      color: var(--white);
+      background-color: var(--bg-dgrey);
+    }
   }
 }
 
 .btn {
   outline: transparent;
   padding: 12px 24px;
+  border-radius: 6px;
   color: var(--white);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0.03em;
   transition: background-color 0.3s, color 0.3s,
     box-shadow 0.3s;
 
@@ -164,6 +214,7 @@ body {
   }
 
   &__title {
+    @extend %line-clamp;
     margin-bottom: 9px;
     flex: 1 1 auto;
   }
@@ -191,7 +242,6 @@ body {
     &--old {
       position: relative;
       color: var(--silver);
-
 
       &::before {
         content: "";
@@ -221,10 +271,11 @@ body {
       content: "";
       width: 16px;
       height: 15px;
-      background-image: url("../images/sprite.svg#cart");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
+      background-color: #fff;
+      mask-image: url("../images/sprite.svg#cart");
+      mask-repeat: no-repeat;
+      mask-position: center center;
+      mask-size: cover;
     }
 
     &:hover {
@@ -240,4 +291,12 @@ body {
       box-shadow: 0px 0px 0px 4px var(--bg-lgreen);
     }
   }
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 32px;
+  @extend %ruda;
+  font-weight: 600;
 }
