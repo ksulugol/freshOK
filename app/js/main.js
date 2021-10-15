@@ -5,6 +5,15 @@ $(function(){
     // autoplay: true
   });
 
+
+  $('.brands__list').slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  });
+
+
    $('.catalog__btn').on('click', function(){
     $('.catalog, .catalog__list, .catalog__btn').toggleClass('active');
     $('.catalog__list').slideToggle();
