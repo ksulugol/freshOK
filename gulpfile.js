@@ -67,6 +67,22 @@ function svgSprites() {
         stack: {
           sprite: "../sprite.svg"
         }
+      },
+      shape: {
+        transform: [
+          {
+            svgo: {
+              plugins: [
+                {
+                  removeAttrs: {
+                    attrs: ['class', 'data-name', 'fill', 'stroke.*']
+                  }
+                },
+                { removeXMLNS: true },
+              ]
+            }
+          }
+        ]
       }
     }))
     .pipe(dest('dist/images'))
