@@ -17,6 +17,97 @@
       <div class="container">
         <div class="header__info info">
 
+          <button class="info__burger" type="button">
+            <span></span>
+            <span class="sr-only">Меню</span>
+          </button>
+
+          <div class="info__menu">
+            <a class="info__logo" href="#">
+              <img class="info__img" src="images/mobile-logo.png" width="200" height="60" alt="Логотип">
+            </a>
+
+            <ul class="info__control control">
+              <li class="control__item">
+                <a class="conrol__link" href="#">Вход</a>
+              </li>
+              <li class="control__item">
+                <a class="conrol__link" href="#">Регистрация</a>
+              </li>
+            </ul>
+
+            <div class="info__wrapper ">
+              <button class="info__btn" type="button">
+                <span></span>
+                <a class="info__catalog" href="#">Каталог товаров</a>
+              </button>
+            </div>
+
+            <ul class="info__contacts">
+              <li class="info__contact">
+                <a class="info__ref" href="tel:+7907288365">
+                  +7 907 288 365
+                </a>
+              </li>
+              <li class="info__contact">
+                <a class="info__ref" href="#">
+                  Санкт-Петербург, Ул. Ленина, 1
+                </a>
+              </li>
+            </ul>
+
+            <ul class="info__social social">
+              <li class="social__item">
+                <a class="social__link" style="background-image: url('images/socials/facebook-black.svg');" href="#">
+                  <span class="sr-only">посетить Фэйсбук</span>
+                </a>
+              </li>
+
+              <li class="social__item">
+                <a class="social__link" style="background-image: url('images/socials/youtube-black.svg');" href="#">
+                  <span class="sr-only">посетить Ютуб</span></a>
+              </li>
+
+              <li class="social__item">
+                <a class="social__link" style="background-image: url('images/socials/telegram-black.svg');" href="#">
+                  <span class="sr-only">посетить Телеграм</span></a>
+              </li>
+
+              <li class="social__item">
+                <a class="social__link" style="background-image: url('images/socials/instagram-black.svg');" href="#">
+                  <span class="sr-only">посетить Инстаграм</span>
+                </a>
+              </li>
+            </ul>
+
+            <ul class="info__panel panel">
+              <li class="panel__item">
+                <a class="panel__link" href="#">Доставка</a>
+              </li>
+              <li class="panel__item">
+                <a class="panel__link" href="#">О нас</a>
+              </li>
+              <li class="panel__item">
+                <a class="panel__link" href="#">Новости</a>
+              </li>
+              <li class="panel__item">
+                <a class="panel__link" href="#">Контакты</a>
+              </li>
+              <li class="panel__item">
+                <a class="panel__link" href="#">Акции</a>
+              </li>
+              <li class="panel__item">
+                <a class="panel__link" href="#">Вакансии</a>
+              </li>
+              <li class="panel__item">
+                <a class="panel__link" href="#">Отзывы</a>
+              </li>
+              <li class="panel__item">
+                <a class="panel__link" href="#">Публичная оферта</a>
+              </li>
+            </ul>
+          </div>
+
           <ul class="info__list">
             <li class="info__item">
               <a class="info__link" href="#">
@@ -56,6 +147,7 @@
         <nav class="header__menu">
           <a class="header__logo" href="#">
             <img class="logo__img" src="images/logo.svg" width="200" height="60" alt="Логотип">
+            <img class="logo__img" src="images/logo-mini.svg" width="37" height="40" alt="Логотип">
           </a>
 
           <div class="header__catalog catalog">
@@ -110,6 +202,14 @@
             <input class="form-search__input" type="search" placeholder="Найти в магазине ...">
             <button class="form-search__btn" id="search" name="search" type="submit">Поиск</button>
           </form>
+
+          <form class="header__mobile-form form-mobile" action="#">
+            <label class="sr-only" for="search"></label>
+            <input class="form-mobile__input" type="search" placeholder="Я ищу ...">
+            <button class="form-mobile__btn" id="search" name="search" type="submit">Поиск</button>
+          </form>
+          <button class="header__search" type=" button">
+          </button>
 
           <ul class="header__user user">
             <li class="user__item">
@@ -234,7 +334,7 @@
     </section>
 
     <section class="products">
-      <div class="container">
+      <div class="container" data-ref="container-1">
         <h2 class="products__title title">
           Топовые товары
         </h2>
@@ -264,10 +364,10 @@
 
           <li class="products__item mix fruits">
             <article class="products__card card">
-              <div class="card__badges">
-                <span class="card__badge card__badge--new card__badge--on">Новинка</span>
-                <span class="card__badge card__badge--sale card__badge--on">-50%</span>
-                <span class="card__badge card__badge--hit">Хит</span>
+              <div class="card__badges badges">
+                <span class="badges__item badges__item--new badges__item--on">Новинка</span>
+                <span class="badges__item badges__item--sale badges__item--on">-50%</span>
+                <span class="badges__item badges__item--hit">Хит</span>
               </div>
               <button class="card__favourite" type="button" aria-label="Добавить в избранное">
                 <svg>
@@ -292,10 +392,10 @@
 
           <li class="products__item mix fruits">
             <article class="products__card card">
-              <div class="card__badges">
-                <span class="card__badge card__badge--new">Новинка</span>
-                <span class="card__badge card__badge--sale">-50%</span>
-                <span class="card__badge card__badge--hit">Хит</span>
+              <div class="card__badges badges">
+                <span class="badges__item badges__item--new">Новинка</span>
+                <span class="badges__item badges__item--sale">-50%</span>
+                <span class="badges__item badges__item--hit">Хит</span>
               </div>
               <button class="card__favourite" type="button" aria-label="Добавить в избранное">
                 <svg>
@@ -320,10 +420,10 @@
 
           <li class="products__item mix fruits">
             <article class="products__card card">
-              <div class="card__badges">
-                <span class="card__badge card__badge--new">Новинка</span>
-                <span class="card__badge card__badge--sale">-50%</span>
-                <span class="card__badge card__badge--hit card__badge--on">Хит</span>
+              <div class="card__badges badges">
+                <span class="badges__item badges__item--new">Новинка</span>
+                <span class="badges__item badges__item--sale">-50%</span>
+                <span class="badges__item badges__item--hit badges__item--on">Хит</span>
               </div>
               <button class="card__favourite" type="button" aria-label="Добавить в избранное">
                 <svg>
@@ -348,10 +448,10 @@
 
           <li class="products__item mix vegetables">
             <article class="products__card card">
-              <div class="card__badges">
-                <span class="card__badge card__badge--new card__badge--on">Новинка</span>
-                <span class="card__badge card__badge--sale">-50%</span>
-                <span class="card__badge card__badge--hit">Хит</span>
+              <div class="card__badges badges">
+                <span class="badges__item badges__item--new badges__item--on">Новинка</span>
+                <span class="badges__item badges__item--sale">-50%</span>
+                <span class="badges__item badges__item--hit">Хит</span>
               </div>
               <button class="card__favourite" type="button" aria-label="Добавить в избранное">
                 <svg>
@@ -376,10 +476,10 @@
 
           <li class="products__item mix vegetables">
             <article class="products__card card">
-              <div class="card__badges">
-                <span class="card__badge card__badge--new">Новинка</span>
-                <span class="card__badge card__badge--sale">-50%</span>
-                <span class="card__badge card__badge--hit card__badge--on">Хит</span>
+              <div class="card__badges badges">
+                <span class="badges__item badges__item--new">Новинка</span>
+                <span class="badges__item badges__item--sale">-50%</span>
+                <span class="badges__item badges__item--hit badges__item--on">Хит</span>
               </div>
               <button class="card__favourite" type="button" aria-label="Добавить в избранное">
                 <svg>
@@ -404,10 +504,10 @@
 
           <li class="products__item mix drinks">
             <article class="products__card card">
-              <div class="card__badges">
-                <span class="card__badge card__badge--new">Новинка</span>
-                <span class="card__badge card__badge--sale card__badge--on">-30%</span>
-                <span class="card__badge card__badge--hit">Хит</span>
+              <div class="card__badges badges">
+                <span class="badges__item badges__item--new">Новинка</span>
+                <span class="badges__item badges__item--sale badges__item--on">-30%</span>
+                <span class="badges__item badges__item--hit">Хит</span>
               </div>
               <button class="card__favourite" type="button" aria-label="Добавить в избранное">
                 <svg>
@@ -433,10 +533,10 @@
 
           <li class="products__item mix drinks">
             <article class="products__card card">
-              <div class="card__badges">
-                <span class="card__badge card__badge--new card__badge--on">Новинка</span>
-                <span class="card__badge card__badge--sale">-50%</span>
-                <span class="card__badge card__badge--hit">Хит</span>
+              <div class="card__badges badges">
+                <span class="badges__item badges__item--new badges__item--on">Новинка</span>
+                <span class="badges__item badges__item--sale">-50%</span>
+                <span class="badges__item badges__item--hit">Хит</span>
               </div>
               <button class="card__favourite" type="button" aria-label="Добавить в избранное">
                 <svg>
@@ -461,10 +561,10 @@
 
           <li class="products__item mix grocery">
             <article class="products__card card">
-              <div class="card__badges">
-                <span class="card__badge card__badge--new">Новинка</span>
-                <span class="card__badge card__badge--sale">-50%</span>
-                <span class="card__badge card__badge--hit">Хит</span>
+              <div class="card__badges badges">
+                <span class="badges__item badges__item--new">Новинка</span>
+                <span class="badges__item badges__item--sale">-50%</span>
+                <span class="badges__item badges__item--hit">Хит</span>
               </div>
               <button class="card__favourite" type="button" aria-label="Добавить в избранное">
                 <svg>
@@ -500,8 +600,7 @@
       <div class="container">
         <ul class="offers__list">
 
-          <li class="offers__item"
-            style="background-image: url(images/offers/offer1.jpg); width: 630px; height: 300px;">
+          <li class="offers__item" style="background-image: url(images/offers/offer1.jpg);">
             <div class="offers__wrapper">
               <p class="offers__text">
                 Свежайшие фрукты
@@ -516,8 +615,7 @@
             </div>
           </li>
 
-          <li class="offers__item"
-            style="background-image: url(images/offers/offer2.jpg); width: 300px; height: 300px;">
+          <li class="offers__item" style="background-image: url(images/offers/offer2.jpg);">
             <div class="offers__wrapper">
               <span class="offers__text">
                 СЕЗОННАЯ РАСПРОДАЖА
@@ -532,8 +630,7 @@
             </div>
           </li>
 
-          <li class="offers__item"
-            style="background-image: url(images/offers/offer3.jpg); width: 300px; height: 300px;">
+          <li class="offers__item" style="background-image: url(images/offers/offer3.jpg);">
             <div class="offers__wrapper">
               <span class="offers__text">
                 НЯМ-НЯМ
@@ -553,7 +650,7 @@
     </section>
 
     <section class="stock">
-      <div class="container">
+      <div class="container" data-ref="container-2">
         <h2 class="stock__title title">
           Акции
         </h2>
@@ -580,10 +677,10 @@
         <ul class="stock__content">
           <li class="stock__item mix new">
             <article class="stock__card">
-              <div class="stock__badges">
-                <span class="stock__badge stock__badge--new stock__badge--on">Новинка</span>
-                <span class="stock__badge stock__badge--sale">-50%</span>
-                <span class="stock__badge stock__badge--hit">Хит</span>
+              <div class="stock__badges badges">
+                <span class="badges__item badges__item--new badges__item--on">Новинка</span>
+                <span class="badges__item badges__item--sale">-50%</span>
+                <span class="badges__item badges__item--hit">Хит</span>
               </div>
               <a class="stock__image" href="#">
                 <img src="images/stock/1.jpg" alt="Ананас">
@@ -612,10 +709,10 @@
 
           <li class="stock__item mix new">
             <article class="stock__card">
-              <div class="stock__badges">
-                <span class="stock__badge stock__badge--new stock__badge--on">Новинка</span>
-                <span class="stock__badge stock__badge--sale">-50%</span>
-                <span class="stock__badge stock__badge--hit">Хит</span>
+              <div class="stock__badges badges">
+                <span class="badges__item badges__item--new badges__item--on">Новинка</span>
+                <span class="badges__item badges__item--sale">-50%</span>
+                <span class="badges__item badges__item--hit">Хит</span>
               </div>
               <a class="stock__image" href="#">
                 <img src="images/stock/2.jpg" alt="Кофе с коноплей">
@@ -645,10 +742,10 @@
 
           <li class="stock__item mix new">
             <article class="stock__card">
-              <div class="stock__badges">
-                <span class="stock__badge stock__badge--new stock__badge--on">Новинка</span>
-                <span class="stock__badge stock__badge--sale">-50%</span>
-                <span class="stock__badge stock__badge--hit">Хит</span>
+              <div class="stock__badges badges">
+                <span class="badges__item badges__item--new badges__item--on">Новинка</span>
+                <span class="badges__item badges__item--sale">-50%</span>
+                <span class="stock__badge badges__item--hit">Хит</span>
               </div>
               <a class="stock__image" href="#">
                 <img src="images/stock/3.jpg" alt="Клубника">
@@ -678,10 +775,10 @@
 
           <li class="stock__item mix new">
             <article class="stock__card">
-              <div class="stock__badges">
-                <span class="stock__badge stock__badge--new stock__badge--on">Новинка</span>
-                <span class="stock__badge stock__badge--sale">-50%</span>
-                <span class="stock__badge stock__badge--hit">Хит</span>
+              <div class="stock__badges badges">
+                <span class="badges__item badges__item--new badges__item--on">Новинка</span>
+                <span class="badges__item badges__item--sale">-50%</span>
+                <span class="badges__item badges__item--hit">Хит</span>
               </div>
               <a class="stock__image" href="#">
                 <img src="images/stock/4.jpg" alt="Манго">
@@ -710,10 +807,10 @@
 
           <li class="stock__item mix new">
             <article class="stock__card">
-              <div class="stock__badges">
-                <span class="stock__badge stock__badge--new stock__badge--on">Новинка</span>
-                <span class="stock__badge stock__badge--sale">-50%</span>
-                <span class="stock__badge stock__badge--hit">Хит</span>
+              <div class="stock__badges badges">
+                <span class="badges__item badges__item--new badges__item--on">Новинка</span>
+                <span class="badges__item badges__item--sale">-50%</span>
+                <span class="badges__item badges__item--hit">Хит</span>
               </div>
               <a class="stock__image" href="#">
                 <img src="images/stock/5.jpg" alt="Лосось">
@@ -742,10 +839,10 @@
 
           <li class="stock__item mix hits">
             <article class="stock__card">
-              <div class="stock__badges">
-                <span class="stock__badge stock__badge--new">Новинка</span>
-                <span class="stock__badge stock__badge--sale">-50%</span>
-                <span class="stock__badge stock__badge--hit stock__badge--on">Хит</span>
+              <div class="stock__badges badges">
+                <span class="badges__item badges__item--new">Новинка</span>
+                <span class="badges__item badges__item--sale">-50%</span>
+                <span class="badges__item badges__item--hit badges__item--on">Хит</span>
               </div>
               <a class="stock__image" href="#">
                 <img src="images/stock/6.jpg" alt="Овощной сок">
@@ -775,10 +872,10 @@
 
           <li class="stock__item mix hits">
             <article class="stock__card">
-              <div class="stock__badges">
-                <span class="stock__badge stock__badge--new ">Новинка</span>
-                <span class="stock__badge stock__badge--sale">-50%</span>
-                <span class="stock__badge stock__badge--hit stock__badge--on">Хит</span>
+              <div class="stock__badges badges">
+                <span class="badges__item badges__item--new ">Новинка</span>
+                <span class="badges__item badges__item--sale">-50%</span>
+                <span class="badges__item badges__item--hit badges__item--on">Хит</span>
               </div>
               <a class="stock__image" href="#">
                 <img src="images/stock/7.jpg" alt="Фруктовая корзина">
@@ -807,10 +904,10 @@
 
           <li class="stock__item mix hits">
             <article class="stock__card">
-              <div class="stock__badges">
-                <span class="stock__badge stock__badge--new ">Новинка</span>
-                <span class="stock__badge stock__badge--sale">-50%</span>
-                <span class="stock__badge stock__badge--hit stock__badge--on">Хит</span>
+              <div class="stock__badges badges">
+                <span class="badges__item badges__item--new ">Новинка</span>
+                <span class="badges__item badges__item--sale">-50%</span>
+                <span class="badges__item badges__item--hit badges__item--on">Хит</span>
               </div>
               <a class="stock__image" href="#">
                 <img src="images/stock/8.jpg" alt="Свинина">
@@ -846,44 +943,31 @@
     </section>
 
     <section class="brands">
-      <h2 class="sr-only">Бренды</h2>
       <div class="container">
         <ul class="brands__list">
 
           <li class="brands__item">
-            <a class="brands__link" href="#">
-              <img class="brands__img" src="images/brands/sprite.svg" width="80" height="34" alt="Sprite">
-            </a>
+            <img class="brands__img" src="images/brands/sprite.svg" width="80" height="34" alt="Sprite">
           </li>
 
           <li class="brands__item">
-            <a class="brands__link" href="#">
-              <img class="brands__img" src="images/brands/dr-pepper.svg" width="80" height="57" alt="Dr pepper">
-            </a>
+            <img class="brands__img" src="images/brands/dr-pepper.svg" width="80" height="57" alt="Dr pepper">
           </li>
 
           <li class="brands__item">
-            <a class="brands__link" href="#">
-              <img class="brands__img" src="images/brands/cola.svg" width="80" height="26" alt="Coca-cola">
-            </a>
+            <img class="brands__img" src="images/brands/cola.svg" width="80" height="26" alt="Coca-cola">
           </li>
 
           <li class="brands__item">
-            <a class="brands__link" href="#">
-              <img class="brands__img" src="images/brands/pepsi.svg" width="80" height="30" alt="Pepsi">
-            </a>
+            <img class="brands__img" src="images/brands/pepsi.svg" width="80" height="30" alt="Pepsi">
           </li>
 
           <li class="brands__item">
-            <a class="brands__link" href="#">
-              <img class="brands__img" src="images/brands/redbull.svg" width="80" height="49" alt="Redbull">
-            </a>
+            <img class="brands__img" src="images/brands/redbull.svg" width="80" height="49" alt="Redbull">
           </li>
 
           <li class="brands__item">
-            <a class="brands__link" href="#">
-              <img class="brands__img" src="images/brands/fanta.svg" width="80" height="59" alt="Fanta">
-            </a>
+            <img class="brands__img" src="images/brands/fanta.svg" width="80" height="59" alt="Fanta">
           </li>
 
         </ul>
@@ -978,7 +1062,7 @@
               <a class="footer__link" href="#">Вакансии</a>
             </li>
             <li class="footer__item">
-              <a class="footeu__link" href="#">Акции</a>
+              <a class="footer__link" href="#">Акции</a>
             </li>
             <li class="footer__item">
               <a class="footer__link" href="#">Отзывы</a>
@@ -1028,7 +1112,6 @@
         </span>
         <ul class="footer__payments">
           <li class="footer__payment">
-            <span class="sr-only">Мы принимаем Visa и Mastercard</span>
             <img class="footer__img" src="images/visa.svg" width="93" height="29" alt="Visa">
           </li>
           <li class="footer__payment">
