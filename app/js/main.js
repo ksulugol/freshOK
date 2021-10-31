@@ -18,7 +18,7 @@ $(function(){
     arrows: false,
     slidesToShow: 6,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
       responsive: [{
           breakpoint: 992,
@@ -47,34 +47,33 @@ $(function(){
     }
   });
 
-
-  $('.catalog__link').on('click', function(){
-    $('.catalog__list').slideUp();
-  });
-
   
 
   $('.info__burger').on('click', function(){
-    $('.info__burger,.info__menu').toggleClass('active');
+    $('.info__burger, .info__menu, .info__burger--open').toggleClass('active');
     $('body').toggleClass('hidden');
   });
 
-  $('.info__link').on('click', function(){
-    $('.info__burger,.info__menu').removeClass('active')
+  $('.info__menu').on('click', function(){
+    $('.info__burger, .info__menu').removeClass('active')
     $('body').removeClass('hidden');
   });
 
 
 
    $('.header__search').on('click', function(){
-    $('.header__search,.form-mobile').toggleClass('active');
-    $('body').toggleClass('hidden');
+    $('.header__search, .header__form').toggleClass('active');
   });
 
-  $('.header__search').on('click', function(){
-    $('.header__search,.form-mobile').removeClass('active')
-    $('body').removeClass('hidden');
-  });
+//   jQuery(function($){
+// 	$(document).mouseup(function (e){ // событие клика по веб-документу
+// 		var div = $("#hide"); // тут указываем ID элемента
+// 		if (!div.is(e.target) // если клик был не по нашему блоку
+// 		    && div.has(e.target).length === 0) { // и не по его дочерним элементам
+// 			div.hide(); // скрываем его
+// 		}
+// 	});
+// });
 
 
 
