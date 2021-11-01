@@ -234,8 +234,219 @@
   </header>
 
   <main class="main">
+    <h1 class="sr-only">Фрешок - интернет магазин свежих продуктов</h1>
+
+    <section class="breadcrumbs">
+      <h2 class="sr-only">Навигация по каталогу</h2>
+      <div class="container">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">
+              Главная
+            </a>
+          </li>
+
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="#">
+              Каталог товаров
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="catalogue">
+      <div class="container">
+        <h2 class="catalogue__title">Каталог товаров</h2>
+        <div class="catalogue__inner">
+
+          <div class="catalogue__filters filters">
+            <ul class="filters__items">
+              <li class="filters__item ">
+                <h3 class="filters__title filters__title--categories">Категории</h3>
+                <button class="filters__button filters__button--categories" type="button"></button>
+
+                <ul class="filters__list filters__list--categories">
+                  <li class="filters__element">
+                    <a class="filters__link" href="#">
+                      Овощи и фрукты
+                    </a>
+                  </li>
+                  <li class="filters__element">
+                    <a class="filters__link" href="#">
+                      Бакалея
+                    </a>
+                  </li>
+                  <li class="filters__element">
+                    <a class="filters__link" href="#">
+                      Молочные продукты
+                    </a>
+                  </li>
+                  <li class="filters__element">
+                    <a class="filters__link" href="#">
+                      Хлеб
+                    </a>
+                  </li>
+                  <li class="filters__element">
+                    <a class="filters__link" href="#">
+                      Мясо
+                    </a>
+                  </li>
+                  <li class="filters__element">
+                    <a class="filters__link" href="#">
+                      Колбаса
+                    </a>
+                  </li>
+                  <li class="filters__element">
+                    <a class="filters__link" href="#">
+                      Рыба
+                    </a>
+                  </li>
+                  <li class="filters__element">
+                    <a class="filters__link" href="#">
+                      Алкоголь
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="filters__item">
+                <h3 class="filters__title filters__title--offer">Предложения</h3>
+                <button class="filters__button filters__button--offer" type="button"></button>
+
+                <ul class="filters__list filters__list--offer">
+                  <li class="filters__link">
+                    Со скидкой
+                  </li>
+                  <li class="filters__link">
+                    Новинка
+                  </li>
+                  <li class="filters__link">
+                    Хит
+                  </li>
+                </ul>
+              </li>
+
+              <li class="filters__item">
+                <h3 class="filters__title filters__title--brand">Бренд</h3>
+                <button class="filters__button filters__button--brand" type="button"></button>
+
+                <ul class="filters__list filters__list--brand">
+                  <li class="filters__link">
+                    CocaCola
+                  </li>
+                  <li class="filters__link">
+                    Pepsi
+                  </li>
+                  <li class="filters__link">
+                    Sprite
+                  </li>
+                  <li class="filters__link">
+                    Fanta
+                  </li>
+                  <li class="filters__link">
+                    RedBull
+                  </li>
+                  <li class="filters__link">
+                    Dr Pepper
+                  </li>
+                </ul>
+              </li>
+
+              <li class="filters__item">
+                <h3 class="filters__title filters__title--price">Цена</h3>
+                <button class="filters__button filters__button--price" type="button"></button>
+
+                <div class="filters__list filters__list--price">
+                  <form class="filters__form" action="#">
+                    
+                    <div class="filters__labels">
+                      <span class="filters__from">от</span>
+                      <label class="filters__label filters__label--first" for="first-price">
+                        <span class="filter__span filter__span--from">100</span>
+                      </label>
+                      <span class="filters__rub">₽</span>
+
+                      <span class="filters__to">до</span>
+                      <label class="filters__label filters__label--second" for="second-price">
+                        <span class="filters__span filters__span--to">1000</span>
+                      </label>
+                      <span class="filters__rub">₽</span>
+                    </div>
+
+                    <label class="filters__label filters__label--line" for="input-line">
+                    </label>
+                    <input class="filters__input filters__input--line" id="input-line" type="text" data-min="100"
+                      data-max="1000" data-from="150" data-to="900">
+                  </form>
+                </div>
+              </li>
+
+            </ul>
+          </div>
 
 
+
+          <div class="catalogue__content">
+
+          </div>
+
+
+
+
+        </div>
+
+
+
+      </div>
+    </section>
+
+
+
+
+
+
+    <section class="guarantees">
+      <h2 class="sr-only">Наши Гарантии</h2>
+      <div class="container">
+        <ul class="guarantees__inner">
+
+          <li class="guarantees__block">
+            <div class="guarantees__wrapper">
+              <h3 class="guarantees__title">
+                Бесплатная доставка
+              </h3>
+              <p class="guarantees__text">
+                Для заказов на сумму от 500 ₽
+              </p>
+            </div>
+          </li>
+
+          <li class="guarantees__block">
+            <div class="guarantees__wrapper">
+              <h3 class="guarantees__title">
+                Возврат товара
+              </h3>
+              <p class="guarantees__text">
+                Если товары были испорчены
+              </p>
+            </div>
+          </li>
+
+          <li class="guarantees__block">
+            <div class="guarantees__wrapper">
+              <h3 class="guarantees__title">
+                Поддержка 24/7
+              </h3>
+              <p class="guarantees__text">
+                Лучшие операторы
+              </p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </section>
 
   </main>
 

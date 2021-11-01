@@ -65,6 +65,7 @@ $(function(){
     $('.header__search, .header__form').toggleClass('active');
   });
 
+
 //   jQuery(function($){
 // 	$(document).mouseup(function (e){ // событие клика по веб-документу
 // 		var div = $("#hide"); // тут указываем ID элемента
@@ -74,6 +75,49 @@ $(function(){
 // 		}
 // 	});
 // });
+
+
+
+   $('.filters__button--categories').on('click', function(){
+    $('.filters__list--categories, .filters__button--categories, .filters__title--categories').toggleClass('active');
+  });
+
+
+ $('.filters__button--offer').on('click', function(){
+    $('.filters__list--offer, .filters__button--offer, .filters__title--offer').toggleClass('active');
+  });
+
+
+ $('.filters__button--brand').on('click', function(){
+    $('.filters__list--brand, .filters__button--brand, .filters__title--brand').toggleClass('active');
+  });
+
+
+   $('.filters__button--price').on('click', function(){
+    $('.filters__list--price, .filters__button--price, .filters__title--price').toggleClass('active');
+  });
+
+
+
+  $('.filters__input--line').ionRangeSlider({
+    type: "double",
+     postfix: "₽",
+     onChange: function (data) {
+       $('.filter__span--from').text(data.from);
+       $('.filters__span--to').text(data.to);
+    }
+  });
+
+    
+
+
+  // $(document).on('click', function (e) {
+  //   var div = $('.catalog');
+  //   if (!div.is(e.target)
+  //       && div.has(e.target).length === 0) {
+  //     $('.catalog__list').slideUp();
+  //   }
+  // });
 
 
 
