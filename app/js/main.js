@@ -18,7 +18,7 @@ $(function(){
     arrows: false,
     slidesToShow: 6,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
       responsive: [{
           breakpoint: 992,
@@ -47,32 +47,87 @@ $(function(){
     }
   });
 
-
-  $('.catalog__link').on('click', function(){
-    $('.catalog__list').slideUp();
-  });
-
   
 
   $('.info__burger').on('click', function(){
-    $('.info__burger,.info__menu').toggleClass('active');
+    $('.info__burger, .info__menu, .info__burger--open').toggleClass('active');
     $('body').toggleClass('hidden');
   });
 
-  $('.info__link').on('click', function(){
-    $('.info__burger,.info__menu').removeClass('active')
+  $('.info__menu').on('click', function(){
+    $('.info__burger, .info__menu').removeClass('active')
     $('body').removeClass('hidden');
   });
 
 
 
    $('.header__search').on('click', function(){
-    $('.header__search,.form-mobile').toggleClass('active');
+    $('.header__search, .header__form').toggleClass('active');
+  });
+
+
+
+
+   $('.filters__button--categories').on('click', function(){
+    $('.filters__list--categories, .filters__button--categories, .filters__title--categories').toggleClass('active');
+  });
+
+
+ $('.filters__button--offer').on('click', function(){
+    $('.filters__list--offer, .filters__button--offer, .filters__title--offer').toggleClass('active');
+  });
+
+
+ $('.filters__button--brand').on('click', function(){
+    $('.filters__list--brand, .filters__button--brand, .filters__title--brand').toggleClass('active');
+  });
+
+
+   $('.filters__button--price').on('click', function(){
+    $('.filters__list--price, .filters__button--price, .filters__title--price').toggleClass('active');
+  });
+
+
+
+  $('.filters__input--line').ionRangeSlider({
+    type: "double",
+     postfix: "₽",
+     onChange: function (data) {
+       $('.filter__span--from').text(data.from);
+       $('.filters__span--to').text(data.to);
+    }
+  });
+
+
+
+	$('.content__select').styler();   
+  
+  
+  
+  $('.content__btn').on('click', function() {
+    $('.content__btn').removeClass('.content__btn--active');
+    $(this).addClass('.content__btn--active');
+  });
+
+
+
+  $('.button-list').on('click', function(){
+     $('.content__products').addClass('content__products--list');
+  });
+  $('.button-grid').on('click', function(){
+     $('.content__products').removeClass('content__products--list');
+  });
+  
+
+
+
+  $('.catalogue__btn').on('click', function(){
+    $('.catalogue__btn, .filters').toggleClass('active');
     $('body').toggleClass('hidden');
   });
 
-  $('.header__search').on('click', function(){
-    $('.header__search,.form-mobile').removeClass('active')
+  $('.catalogue__btn.active').on('click', function(){
+    $('.catalogue__btn, .filters').removeClass('active')
     $('body').removeClass('hidden');
   });
 
