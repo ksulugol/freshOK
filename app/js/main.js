@@ -118,12 +118,46 @@ $('.filters__button').on('click', function() {
     $('body').removeClass('hidden');
   });
 
-  $(".product__star").rateYo({
+
+
+  $(".star").rateYo({
     starWidth: "16px",
     normalFill: "#C1C1C14D",
     ratedFill: "#FFB800",
     readOnly: true
   });
+
+  $(".form__rating").rateYo({
+    starWidth: "16px",
+    normalFill: "#C1C1C14D",
+    ratedFill: "#FFB800"
+  });
+
+
+
+
+
+  $('.product__slides').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
+  });
+
+
+  $('.product__num').styler();
+
+
+  $('.tabs__link').on('click', function(e){
+    e.preventDefault();
+    $('.tabs__link').removeClass('tabs__link--active');
+    $(this).addClass('tabs__link--active');
+
+    $('.tabs__item').removeClass('tabs__item--active');
+    $($(this).attr('href')).addClass('tabs__item--active');
+  });
+
 
 
 

@@ -267,39 +267,253 @@
 
           <div class="product__item">
             <div class="product__inner">
-              <div class="product__slide">
-                <img class="product__img" src="images/product-page/1.jpg" alt="Питахайя">
-              </div>
+
+              <ul class="product__slides">
+                <li class="product__slide">
+                  <img class="product__img" src="images/product-page/1.jpg" alt="Питахайя">
+                </li>
+                <li class="product__slide">
+                  <img class="product__img" src="images/product-page/1.jpg" alt="Питахайя">
+                </li>
+                <li class="product__slide">
+                  <img class="product__img" src="images/product-page/1.jpg" alt="Питахайя">
+                </li>
+              </ul>
 
               <div class="product__content">
                 <h3 class="product__title">
                   Питахайя красная с белой мякотью
                 </h3>
-                <div class="product__badge"></div>
+                <div class="product__badge">Хит</div>
                 <div class="product__box">
                   <div class="product__rating">
                     <span class="product__code">
                       Код: 0111111
                     </span>
-                    <div class="product__star" data-rateyo-rating="4"></div>
+                    <div class="product__star star" data-rateyo-rating="4"></div>
                   </div>
-                  <div class="product__avialability"></div>
+                  <div class="product__avialability">
+                    В НАЛИЧИИ
+                  </div>
                 </div>
                 <div class="product__prices">
                   <span class="product__price product__price--old">299 ₽</span>
                   <span class="product__price">199 ₽</span>
                 </div>
 
+                <div class="product__wrapper">
+                  <div class="product__cart">
+                    <input class="product__num" type="number" value="1">
+                    <button class="product__btn" type="submit">
+                      ДОБАВИТЬ В КОРЗИНУ
+                    </button>
+                  </div>
+                  <button class="product__favourite card__favourite" type="button" aria-label="Добавить в избранное">
+                    <svg>
+                      <use xlink:href="images/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <span class="product__delivery product__delivery--title">
+                  Доставка и оплата
+                </span>
+                <div class="product__delivery product__delivery--text">
+                  <span>Минимальная сумма заказа - 100 руб.</span>
+                  <span>Время доставки заказа - 60-120 мин.</span>
+                  <span>Оплата осуществляется только банковской картой.</span>
+                  <span>Окончательная сумма заказа формируется после сбора товаров.</span>
+                </div>
+                <a class="product__delivery product__delivery--details" href="#">Подробнее</a>
               </div>
             </div>
           </div>
-          <div class="product__tabs">
+      </section>
+
+      <section class="tabs">
+        <div class="container">
+          <div class="tabs__top">
+            <ul class="tabs__titles">
+
+              <li class="tabs__title">
+                <a class="tabs__link tabs__link--active" href="#tab-1">ОПИСАНИЕ</a>
+              </li>
+              <li class="tabs__title">
+                <a class="tabs__link" href="#tab-2">ХАРАКТЕРИСТИКИ</a>
+              </li>
+              <li class="tabs__title">
+                <a class="tabs__link" href="#tab-3">ОТЗЫВЫ (2)</a>
+              </li>
+
+            </ul>
+          </div>
+          <div class="tabs__content">
+            <ul class="tabs__items">
+
+              <li class="tabs__item tabs__item--active description" id="tab-1">
+                <ul class="description__items">
+                  <li class="description__item">
+                    <p>
+                      Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует
+                      укреплению иммунной системы. В составе питайи много клетчатки, она благотворно влияет на работу
+                      ЖКТ.
+                      Оказывает противовоспалительное действие, так как фрукт богат антиоксидантами. При употреблении
+                      питахайи, понижается уровень сахара в крови, улучшается зрение и работа сердечно–сосудистой
+                      системы.
+                      Так
+                      как фрукт низкокалорийный и состоит на 90% из воды, способствует снижению веса.
+                    </p>
+                  </li>
+                  <li class="description__item">
+                    <p>
+                      Витамины: С, Е, РР, витамины группы В
+                    </p>
+                  </li>
+                  <li class="description__item">
+                    <p>
+                      Микроэлементы: железо, калий, кальций, магний, фосфор
+                    </p>
+                  </li>
+                  <li class="description__item">
+                    <p>
+                      Внешний вид товара может отличаться от изображений, представленных на сайте.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="tabs__item characteristic" id="tab-2">
+                <ul class="characteristic__items">
+                  <li class="characteristic__item">
+                    <span class="characteristic__span">
+                      Вес:
+                    </span>
+                    250-350 г;
+                  </li>
+
+                  <li class="characteristic__item">
+                    <span class="characteristic__span">
+                      Калорийность (на 100г):
+                    </span>
+                    50 ккал;
+                  </li>
+
+                  <li class="characteristic__item">
+                    <span class="characteristic__span">
+                      Условия хранения:
+                    </span>
+                    температура от +3 до +8;
+                  </li>
+
+                  <li class="characteristic__item">
+                    <span class="characteristic__span">
+                      Другие названия:
+                    </span>
+                    Драконов фрукт, Глаз дракона;
+                  </li>
+
+                  <li class="characteristic__item">
+                    <span class="characteristic__span">
+                      Страна происхождения:
+                    </span>
+                    Вьетнам;
+                  </li>
+
+                  <li class="characteristic__item">
+                    <span class="characteristic__span">
+                      Срок хранения:
+                    </span>
+                    до 5 дней.
+                  </li>
+                </ul>
+              </li>
+
+              <li class="tabs__item comments" id="tab-3">
+                <ul class="comments__wrapper">
+                  <h3 class="comments__title">
+                    МНЕНИЯ НАШИХ КЛИЕНТОВ
+                  </h3>
+                  <li class="comments__box">
+                    <div class="comments__top">
+                      <div class="comments__user">
+                        <img class="comments__img" src="images/avatar/1.jpg" alt="avatar">
+
+                        <div class="comments__person">
+                          <span class="comments__name">Андрей</span>
+                          <span class="comments__date">10.06.2021</span>
+                        </div>
+                      </div>
+
+                      <div class="comments__rating star" data-rateyo-rating="4"></div>
+                    </div>
+
+                    <p class="comments__text">
+                      Яркий цвет, нежный вкус. Очень свежий и приятный, буду пробовать еще!))
+                    </p>
+                  </li>
+
+                  <li class="comments__box">
+                    <div class="comments__top">
+                      <div class="comments__user">
+                        <img class="comments__img" src="images/avatar/1.jpg" alt="avatar">
+
+                        <div class="comments__person">
+                          <span class="comments__name">Екатерина Белая</span>
+                          <span class="comments__date">7.06.2021</span>
+                        </div>
+                      </div>
+
+                      <div class="comments__rating star" data-rateyo-rating="5"></div>
+                    </div>
+
+                    <p class="comments__text">
+                      Цвет, конечно, очень насыщенный! Ожидаешь, что и вкус будет такой же яркий (просто взрыв), но нет.
+                      Вкус "сдержанно-сладкий" и очень-очень свежий! Рад, что есть такая возможность - пробовать
+                      экзотические фрукты.
+                    </p>
+                  </li>
+                </ul>
+
+                <form class="comments__form form" action="#">
+                  <h3 class="form__title comments__title">
+                    ОСТАВИТЬ ОТЗЫВ
+                  </h3>
+                  <div class="form__wrapper">
+                    <span class="form__star">Ваша оценка *</span>
+                    <div class="form__rating" data-rateyo-rating="0"></div>
+
+                    <div class="form__box">
+                      <div class="form__comment">
+                        <label class="form__label" for="user-message">Ваш отзыв *</label>
+                        <textarea class="form__textarea" placeholder="Введите текст отзыва" id="user-message"
+                          required></textarea>
+                      </div>
+
+                      <div class="form__inputs">
+
+                        <label class="form__label" for="user-name">Имя</label>
+                        <input class="form__input form__input--name" type="text" placeholder="Введите ваше имя"
+                          id="user-name" required>
+
+                        <label class="form__label" for="user-email">Email *</label>
+                        <input class="form__input" type="text" placeholder="youremail@mail.com" id="user-email"
+                          required>
+                      </div>
+                    </div>
+                    <div class="form__check">
+                      <input class="form__checkbox" type="checkbox" name="brand">
+                      <span class="form__save">Сохранить моё имя, email и адрес сайта в этом браузере для последующих
+                        моих
+                        комментариев.</span>
+                    </div>
+                    <button class="form__btn" type="submit">Оставить отзыв</button>
+                  </div>
+                </form>
+              </li>
+            </ul>
 
           </div>
 
-          <div class="product__review">
-
-          </div>
         </div>
       </section>
 
