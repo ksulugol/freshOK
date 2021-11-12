@@ -331,9 +331,11 @@ body {
 }
 
 .breadcrumbs {
+  padding: 24px 0;
+
   &__list {
-    height: 65px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
   }
 
@@ -358,7 +360,21 @@ body {
         left: 63px;
         top: 2px;
       }
+    }
 
+    &:nth-child(2) {
+      padding-right: 16px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        mask: url('../images/sprite.svg#breadcrumbs-arrow') center / cover;
+        background-color: var(--silver);
+        width: 6px;
+        height: 10px;
+        left: 124px;
+        top: 2px;
+      }
     }
   }
 }
