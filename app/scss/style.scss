@@ -2823,6 +2823,10 @@
   padding-bottom: 84px;
   border-top: 1px solid var(--silver);
 
+  @include media-4 {
+    padding-bottom: 48px;
+  }
+
   &__titles {
     display: flex;
     justify-content: center;
@@ -3156,6 +3160,139 @@
 
     &:focus {
       box-shadow: 0 0 0 4px var(--bg-lgreen);
+    }
+  }
+}
+
+.recommended {
+  padding-bottom: 46px;
+
+  @include media-4 {
+    padding-bottom: 36px;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    @extend %ruda;
+    text-transform: uppercase;
+    font-size: 30px;
+
+    @include media-4 {
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+  }
+
+  .slick-slide {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .slick-arrow {
+    width: 60px;
+    height: 60px;
+    font-size: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--silver);
+    border-radius: 6px;
+    z-index: 10;
+    transition: background-image 0.3s, border 0.3s,
+      background-color 0.3s, box-shadow 0.3s;
+  }
+
+  .slick-prev {
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    transform: translate(0, -50%);
+
+    @include media-slider {
+      left: 30px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 19px;
+      top: 13px;
+      width: 18px;
+      height: 32px;
+      mask: url('../images/sprite.svg#arrow-left') center / cover;
+      background-color: var(--bg-dgrey);
+    }
+
+    &:hover,
+    &:active {
+      @extend %left-green;
+    }
+
+    &:focus {
+      @extend %left-green;
+      outline: transparent;
+      box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
+    }
+  }
+
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    right: 60px;
+    transform: translate(0, -50%);
+
+    @include media-slider {
+      right: 30px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 19px;
+      top: 13px;
+      width: 18px;
+      height: 32px;
+      mask: url('../images/sprite.svg#arrow-right') center / cover;
+      background-color: var(--grey);
+    }
+
+    &:hover,
+    &:active {
+      @extend %right-green;
+    }
+
+    &:focus {
+      @extend %right-green;
+      outline: transparent;
+      box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
+    }
+  }
+
+  .slick-dots {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 16px;
+    display: flex;
+    justify-content: center;
+
+    li+li {
+      margin-left: 12px;
+    }
+
+    button {
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      border-radius: 50%;
+      border: 1px solid #C1C1C1;
+      font-size: 0;
+    }
+
+    .slick-active {
+      button {
+        background-color: var(--green);
+        border: var(--green);
+      }
     }
   }
 }

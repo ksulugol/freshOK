@@ -159,6 +159,21 @@ $('.filters__button').on('click', function() {
   });
 
 
+   $('.recommended__items').slick({
+    arrows: true,
+    dots: false,
+    slidesToShow: 4,
+     responsive: [{
+            breakpoint: 768,
+              settings: {
+                arrows: false,
+                slidesToShow: 2,
+                dots: true
+              }
+    }]
+  });
+
+
 
 
   var containerEl1 = document.querySelector('[data-ref="container-1"]');
