@@ -1,7 +1,7 @@
 :root {
   --white: #fff;
   --black: #121212;
-  --menu-cat: #000000;
+  --menu-cat: #a17c7c;
   --grey: #505050;
   --green: #63A60E;
   --bg-lgreen: #E0EDCF;
@@ -16,7 +16,45 @@
   --green-arrow: #7CB238;
   --silver: #C1C1C1;
   --sun: #FFB800;
+  --c4: #C4C4C4;
 }
+
+$mds: 1550;
+$md1: 1320;
+$md2: 992;
+$md3: 768;
+$md4: 576;
+
+@mixin media-slider {
+  @media (max-width: $mds + 'px') {
+    @content;
+  }
+}
+
+@mixin media-1 {
+  @media (max-width: $md1 + 'px') {
+    @content;
+  }
+}
+
+@mixin media-2 {
+  @media (max-width: $md2 + 'px') {
+    @content;
+  }
+}
+
+@mixin media-3 {
+  @media (max-width: $md3 + 'px') {
+    @content;
+  }
+}
+
+@mixin media-4 {
+  @media (max-width: $md4+ 'px') {
+    @content;
+  }
+}
+
 
 %opensans {
   font-family: 'OpenSans', sans-serif;
@@ -58,10 +96,10 @@
   }
 }
 
-%line-clamp {
+@mixin line-clamp($lines) {
   display: -webkit-box;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: $lines;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
